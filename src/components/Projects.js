@@ -51,6 +51,7 @@ const Projects = () => {
                 src={data.image}
                 alt=""
                 className="rounded-md w-screen mb-2 md:w-96 mb-0 object-contain shrink-0 px-5"
+                loading="lazy"
               />
               <motion.div className="px-5 md:self-center">
                 <h2 className="text-2xl mb-3 lg:text-2xl">{data.name}</h2>

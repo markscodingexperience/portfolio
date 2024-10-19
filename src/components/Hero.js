@@ -44,6 +44,7 @@ const Hero = () => {
           className="w-full will-change-transform md:w-1/2"
           src="/images/itsmebutransparent.png"
           alt="Picture of Mark"
+          loading="lazy"
         />
 
         <motion.div
