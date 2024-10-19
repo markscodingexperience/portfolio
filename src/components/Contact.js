@@ -39,7 +39,7 @@ const Contact = () => {
                 </p>
               </div>
               {copied === index.name && (
-                <span className="text-sm text-green-500 ml-2 absolute">
+                <span className="text-sm text-green-500 ml-2 absolute top-0">
                   Copied!
                 </span>
               )}

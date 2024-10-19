@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../About.css";
+import ResumeDoc from "../assets/Marks-CV (1).pdf";
 
 const Hero = () => {
   const largeScreenVariants = {
@@ -86,7 +87,14 @@ const Hero = () => {
             whileTap={{ scale: 0.98 }}
             className="rounded-md py-3 px-5 mt-2 shadow-[0px_6px_12px_0px_rgba(128,0,128,0.6)] bg-gradient-to-l from-purple-400 via-pink-500 to-red-500 will-change-transform"
           >
-            Download Resume
+            <a
+              href={ResumeDoc}
+              download="Mark's Resume"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Resume{" "}
+            </a>
           </motion.button>
         </motion.div>
       </div>

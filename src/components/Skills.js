@@ -4,7 +4,7 @@ import skillsdata from "../data/skillsdata";
 const Skills = () => {
   return (
     <section
-      className="mt-2 pb-10 pt-5 h-full bg-gradient-to-l from-blue-500 via-purple-500 to-pink-500"
+      className="mt-2 pb-10 pt-5 h-full bg-gradient-to-r from-purple-500  to-pink-500"
       id="skills"
     >
       <div className="flex flex-col">
@@ -33,7 +33,12 @@ const Skills = () => {
             className="flex flex-col rounded-md bg-gray-300 m-2 p-4 shadow-[6px_6px_12px_-4px_rgba(0,0,0,0.35)] md:p-10"
             key={data.name}
           >
-            <img src={data.location} alt={data.name} className="" />
+            <img
+              src={data.location}
+              alt={data.name}
+              className=""
+              loading="lazy"
+            />
             <h3 className="text-sm self-center pt-3 md:text-lg">{data.name}</h3>
           </motion.div>
         ))}
