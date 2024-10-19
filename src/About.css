@@ -1,0 +1,32 @@
+.custom-line::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 55px;
+  height: 2px;
+  background: rgb(5, 180, 116);
+  background: linear-gradient(
+    93deg,
+    rgba(5, 180, 116, 0.3309698879551821) 5%,
+    rgba(9, 71, 223, 1) 53%,
+    rgba(145, 0, 255, 1) 100%
+  );
+}
+
+.custom-line-about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 5px 5px 0;
+  height: 55px;
+  width: 2px;
+  background: rgb(5, 180, 119);
+  background: linear-gradient(
+    273deg,
+    rgba(5, 180, 119, 0.7903536414565826) 5%,
+    rgba(9, 223, 188, 1) 53%,
+    rgba(0, 255, 209, 1) 100%
+  );
+}
