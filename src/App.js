@@ -1,23 +1,27 @@
-import "./App.css";
-import About from "./components/About";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Testimonial from "./components/Testimonial";
-import Contact from "./components/Contact";
+import React, { Suspense } from "react";
 import "@fontsource/poppins";
+
+// Lazy loading components
+const About = React.lazy(() => import("./components/About"));
+const Hero = React.lazy(() => import("./components/Hero"));
+const Navbar = React.lazy(() => import("./components/Navbar"));
+const Skills = React.lazy(() => import("./components/Skills"));
+const Projects = React.lazy(() => import("./components/Projects"));
+const Testimonial = React.lazy(() => import("./components/Testimonial"));
+const Contact = React.lazy(() => import("./components/Contact"));
 
 function App() {
   return (
     <div className="font-poppins">
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <About></About>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Testimonial></Testimonial>
-      <Contact></Contact>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Testimonial />
+        <Contact />
+      </Suspense>
     </div>
   );
 }
